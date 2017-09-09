@@ -30,9 +30,6 @@ export default {
   width: 125px;
   height: 125px;
 }
-nav {
-  font-family: merriweather, georgia;
-}
  nav a {
   color: #8BBDB8;
   text-decoration: none;

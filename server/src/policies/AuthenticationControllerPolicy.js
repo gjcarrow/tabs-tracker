@@ -5,11 +5,11 @@ module.exports = {
     var schema = {
       email: Joi.string().email(),
       password: Joi.string().regex(
-        new RegExp('^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$'))
+        new RegExp('^[a-zA-Z0-9]{8,32}$'))
     }
 
     // Here, the value is the json object of email and password with their values
-    var {error, value} = Joi.validate(req.body, schema)
+    var {error} = Joi.validate(req.body, schema)
 
     if (error) {
       console.log(error.details[0].context.key)
@@ -21,7 +21,7 @@ module.exports = {
           break
         case 'password':
           res.status(400).send({
-            error: `Please ensure the password you've chosen follows these rules: 
+            error: `Please ensure the password you've chosen follows these rules:
             <br>
             <ol>
               <li>It must contain ONLY the following characters: lowercase, uppercase, numerics.</li>
