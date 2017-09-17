@@ -42,15 +42,6 @@
   }
 </script>
 <style scoped>
-  nav.toolbar {
-    margin-bottom: 55px;
-  }
-  nav.toolbar a {
-/*     display: inline-flex;
-    height: 36px;
-    width: 100%;
-    font-size: 14px;
- */  }
   .toolbar a:hover {
     text-decoration: none;
   }

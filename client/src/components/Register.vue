@@ -28,10 +28,14 @@
     methods: {
       async register () {
         try {
-          await AuthenticationService.register({
+          var tool = await AuthenticationService.register({
             email: this.email,
             password: this.password
           })
+          if (tool.status === 200) {
+            var rt = { name: 'home' }
+            this.$router.push(rt)
+          }
         } catch (error) {
           this.error = error.response.data.error
         }

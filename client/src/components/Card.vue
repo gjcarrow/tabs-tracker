@@ -4,19 +4,19 @@
     </v-card-media>
     <v-card-title primary-title>
       <div>
-        <h3 class="song-title headline mb-0 grey--text">{{ artist }}</h3>
-        <h5 class="song-album grey--text">{{ album }}</h5>
-        <h5 class="song-title grey--text">{{ title }}</h5>
+        <h3 class="song-title headline mb-0 light-primary-color-text">{{ artist }}</h3>
+        <h5 class="song-album light-primary-color-text">{{ album }}</h5>
+        <h5 class="song-title light-primary-color-text">{{ title }}</h5>
       </div>
     </v-card-title>
     <v-card-actions>
       <v-btn flat class="red--text action-2"
-        @click="navigateTo({
-        name: 'song',
-        params: {
-          id: id
-        }
-      })"
+        :to="{
+                name: 'song',
+                params: {
+                  id: id
+                }
+              }"
     ><v-icon class="accent-shade-color" large>explore</v-icon></v-btn> 
    </v-card-actions>
   </v-card>
@@ -32,9 +32,9 @@
       'albumImageUrl'
     ],
     methods: {
-      navigateTo (song) {
-        this.$router.push(song)
-      }
+      // navigateTo (song) {
+      //   this.$router.push(song)
+      // }
     }
   }
 </script>

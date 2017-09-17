@@ -18,5 +18,12 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  filters: {
+    capitalize (value) {
+      if (!value) { return '' }
+      value = value.toString()
+      return value.toUpperCase()
+    }
+  }
 })

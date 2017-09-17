@@ -27,7 +27,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #8BBDB8;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 #app > img {
   width: 125px;

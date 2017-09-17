@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import Songs from '@/components/Songs'
-import SingleSong from '@/components/SingleSong'
+import SingleSong from '@/components/ViewSong/SingleSong'
 import Register from '@/components/Register'
 import CreateSong from '@/components/CreateSong'
 
